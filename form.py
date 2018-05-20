@@ -2,4 +2,4 @@ from wtforms import Form, StringField, validators
 
 
 class DomainForm(Form):
-	pass
+	domain = StringField('Username', [validators.Length(min=1, max=999)])

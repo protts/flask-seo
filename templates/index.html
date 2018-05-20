@@ -10,5 +10,27 @@
 			<a class="navbar-brand" href="">Flas SEO</a>
 		</div>
 	</nav>
+	<br>
+	<div class="container">
+		<form method="post">
+		  <div class="form-group">
+		  	<span>Enter domain</span><br><br>
+		    {{form.domain}}
+		  <button type="submit" class="btn btn-primary">Check</button>
+		</form>
+		<br>
+		<br>
+		<br>
+		<h2>Result</h2>
+		<ol class="list-group">
+		  {% if result %}
+		  	{% for k in result %}
+		  	<li class="list-group-item"><a href="{{k}}">{{k}}</a></li>
+		  	{% endfor %}
+		  {% else %}
+		  	<li class="list-group-item">No Results</li>
+		  {% endif %}
+		</ol>
+	</div>
 </body>
 </html>
